@@ -1,4 +1,4 @@
-# 🌶️ GINGER
+# GINGER
 
 ### Intentional Dating Through Real Conversations
 
