@@ -1,4 +1,4 @@
-#  GINGER
+# 🌶️ GINGER
 
 ### Intentional Dating Through Real Conversations
 
@@ -123,16 +123,6 @@ npm run migrate
 npm run dev
 ```
 
-### Environment Variables
-
-```env
-DATABASE_URL=postgresql://user:password@localhost:5432/ginger
-REDIS_URL=redis://localhost:6379
-TWILIO_ACCOUNT_SID=your_account_sid
-TWILIO_API_KEY=your_api_key
-JWT_SECRET=your_jwt_secret
-```
-
 ---
 
 ## 📱 MVP Scope
@@ -207,12 +197,6 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
