@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GINGER - Match on Vibe, Not Looks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-background">
+    <div class="landing-container">
+        <header class="landing-header">
+            <img src="{{ url_for('static', filename='../public/ginger-logo.jpg') }}" alt="GINGER" class="logo" style="filter: drop-shadow(0 4px 8px rgba(224, 123, 57, 0.2));">
+        </header>
+        
+        <main class="landing-main">
+            <h1 class="landing-title">Match on vibe, not looks.</h1>
+            <p class="landing-subtitle">Have a real conversation first. Decide if you feel it. Then match.</p>
+            
+            <div class="landing-cta-group">
+                <a href="/login" class="btn btn-primary btn-large">Log In</a>
+                <a href="/signup" class="btn btn-secondary btn-large">Sign Up</a>
+            </div>
+            
+            <section class="features">
+                <div class="feature">
+                    <h3>Conversation First</h3>
+                    <p>No profiles to swipe. Just real, authentic video conversations.</p>
+                </div>
+                <div class="feature">
+                    <h3>Vibe Match</h3>
+                    <p>Feel the connection before you commit. Your gut knows what your eyes can't see.</p>
+                </div>
+                <div class="feature">
+                    <h3>Intentional Dating</h3>
+                    <p>Limited daily messages. Meaningful connections. No endless scrolling.</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="landing-footer">
+            <p>&copy; 2024 GINGER. Built for real connections.</p>
+        </footer>
+    </div>
+</body>
+</html>

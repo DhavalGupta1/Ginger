@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - GINGER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-background">
+    <div class="auth-container">
+        <header class="auth-header">
+            <img src="{{ url_for('static', filename='../public/ginger-logo.jpg') }}" alt="GINGER" class="logo-small" style="filter: drop-shadow(0 2px 4px rgba(224, 123, 57, 0.2));">
+        </header>
+        
+        <main class="auth-main">
+            <div id="signup-form" class="auth-form">
+                <h1>Create Your Account</h1>
+                <p class="auth-subtitle">Join GINGER and find your vibe.</p>
+                
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="At least 8 characters">
+                        <span class="hint">At least 8 characters, mix of letters and numbers recommended</span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                </form>
+                
+                <p class="auth-switch">Already have an account? <a href="/login">Log in</a></p>
+                <span class="error-message" id="signup-error"></span>
+            </div>
+            
+            <div id="otp-form" class="auth-form" style="display: none;">
+                <h1>Verify Your Email</h1>
+                <p class="auth-subtitle">We sent a code to <span id="verify-email"></span></p>
+                
+                <div class="otp-display-box" id="otp-display-box" style="display: none; background: #FFF8F0; border: 2px solid #E07B39; border-radius: 12px; padding: 20px; margin-bottom: 20px; text-align: center;">
+                    <p style="color: #999; font-size: 12px; margin-bottom: 10px;">Your verification code:</p>
+                    <div id="otp-code-display" style="font-size: 32px; font-weight: bold; letter-spacing: 4px; color: #E07B39; font-family: monospace;"></div>
+                </div>
+                
+                <form id="otpForm">
+                    <div class="form-group">
+                        <label for="otp">Verification Code</label>
+                        <input type="text" id="otp" name="otp" required placeholder="000000" maxlength="6">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Verify</button>
+                    <button type="button" class="btn btn-text btn-block" id="resend-otp">Didn't receive code? Resend</button>
+                </form>
+                
+                <span class="error-message" id="otp-error"></span>
+            </div>
+            
+            <div id="success-message" class="success-screen" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h1>Welcome to GINGER!</h1>
+                <p>Your account is ready. Let's find your vibe.</p>
+                <a href="/home" class="btn btn-primary btn-block">Go to Home</a>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='auth.js') }}"></script>
+</body>
+</html>

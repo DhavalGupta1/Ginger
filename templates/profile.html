@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - GINGER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-background">
+    <div class="app-container">
+        <header class="app-header">
+            <div class="app-header-left">
+                <a href="/home" class="back-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="app-header-center">
+                <h2>Profile</h2>
+            </div>
+            <div class="app-header-right"></div>
+        </header>
+        
+        <main class="profile-main">
+            <div class="profile-card">
+                <div class="profile-photo">
+                    <img src="{{ url_for('static', filename='../public/ginger-mascot.jpg') }}" alt="Profile">
+                </div>
+                
+                <h1 id="profile-name" class="profile-name">Your Name</h1>
+                
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <label>Email</label>
+                        <p id="profile-email"></p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Birthday</label>
+                        <p id="profile-birthday">Not set</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Star Sign</label>
+                        <p id="profile-starsign">Not set</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Location</label>
+                        <p id="profile-location">Not set</p>
+                    </div>
+                </div>
+                
+                <div class="interests-section">
+                    <label>Interests</label>
+                    <div class="interests-chips" id="interests-chips"></div>
+                </div>
+                
+                <button class="btn btn-secondary btn-block" onclick="editProfile()">Edit Profile</button>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Settings</h3>
+                <button class="setting-item">
+                    <span>Notifications</span>
+                    <span class="arrow">›</span>
+                </button>
+                <button class="setting-item">
+                    <span>Privacy</span>
+                    <span class="arrow">›</span>
+                </button>
+                <button class="setting-item">
+                    <span>Account</span>
+                    <span class="arrow">›</span>
+                </button>
+                <button class="setting-item" onclick="logout()">
+                    <span style="color: var(--color-danger);">Log Out</span>
+                    <span class="arrow">›</span>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='profile.js') }}"></script>
+</body>
+</html>

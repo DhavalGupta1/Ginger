@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - GINGER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-background">
+    <div class="app-container">
+        <header class="app-header">
+            <div class="app-header-left">
+                <a href="/home" class="back-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="app-header-center">
+                <h2>Messages</h2>
+            </div>
+            <div class="app-header-right"></div>
+        </header>
+        
+        <main class="messages-main">
+            <div class="search-bar-container">
+                <input type="text" class="search-bar" placeholder="Search conversations...">
+            </div>
+            
+            <div class="chat-list" id="chat-list">
+                <div class="empty-state">
+                    <p>No conversations yet.</p>
+                    <p class="text-hint">Find a vibe to start chatting</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Chat Modal -->
+    <div id="chat-modal" class="modal" style="display: none;">
+        <div class="modal-content chat-content">
+            <header class="modal-header">
+                <button class="back-btn" onclick="closeChat()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <h3 id="chat-name">Chat</h3>
+                <div style="width: 24px;"></div>
+            </header>
+            
+            <div class="messages-container" id="messages-container"></div>
+            
+            <div class="message-limit-indicator">
+                <span>Daily messages left: <strong id="messages-left">3</strong></span>
+            </div>
+            
+            <div class="message-input-container">
+                <input type="text" id="message-input" placeholder="Say something..." class="message-input">
+                <button id="send-btn" class="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='messages.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - GINGER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-background">
+    <div class="auth-container">
+        <header class="auth-header">
+            <img src="{{ url_for('static', filename='../public/ginger-logo.jpg') }}" alt="GINGER" class="logo-small" style="filter: drop-shadow(0 2px 4px rgba(224, 123, 57, 0.2));">
+        </header>
+        
+        <main class="auth-main">
+            <div class="auth-form">
+                <h1>Welcome Back</h1>
+                <p class="auth-subtitle">Log in to find your next vibe.</p>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="••••••••">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                    <span class="error-message" id="login-error"></span>
+                </form>
+                
+                <p class="auth-switch">Don't have an account? <a href="/signup">Sign up</a></p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
+</body>
+</html>

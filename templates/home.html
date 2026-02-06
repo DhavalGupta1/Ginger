@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - GINGER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-background">
+    <div class="app-container">
+        <header class="app-header">
+            <div class="app-header-left">
+                <button id="dm-btn" class="icon-btn" title="Messages">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="app-header-right">
+                <button id="profile-btn" class="icon-btn" title="Profile">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        
+        <main class="home-main">
+            <div class="home-content">
+                <h1 class="home-title">Find a Vibe</h1>
+                <button id="vibe-btn" class="btn btn-primary btn-xlarge">Start a Conversation</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+</body>
+</html>
